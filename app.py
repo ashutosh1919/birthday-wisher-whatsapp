@@ -9,8 +9,8 @@ app = Flask(__name__)
 dateparse = lambda x: datetime.strptime(x, "%m-%d-%Y")
 df_bday = pd.read_csv("birthdays.csv", dtype={0:str, 1:str, 2: str}, parse_dates=['Date'], date_parser=dateparse)
 
-account_sid = 'AC97f4f8a453c151eb7d9ce72332b58f17'
-auth_token = '0ecf334d0e8e3aed3eb9589c62ad5158'
+account_sid = '<ACC_SID>'
+auth_token = '<AUTH_TOKEN>'
 client = Client(account_sid, auth_token)
 
 def send_message(client, wapp_number, name):
